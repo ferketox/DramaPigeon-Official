@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blocked? Ghosted? Let DramaPigeon deliver your message for just $1 – anonymously or not. We’re the pigeons you need." />
-    <link rel="icon" href="DramaPigeonLogo.png" type="image/png">
     <title>DramaPigeon | Send Anonymous Letters & Messages</title>
     <script type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
@@ -403,6 +401,14 @@
         
         /* Responsive Design */
         @media (max-width: 768px) {
+        
+            .container {
+                width: 90%;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+
             .header-content {
                 flex-direction: column;
                 text-align: center;
@@ -410,25 +416,71 @@
             
             .logo {
                 margin: 0 0 20px 0;
+                font-size: 1.6rem;
+                font-weight: 100px;
             }
-            
+
+            .check-messages a {
+                padding: 8px 10px;
+                font-weight: 400;
+                font-size: 0.8rem;
+            }
+
+            nav {
+                margin: 10px 0;
+
+            } 
+
             .subscribe-form {
                 width: 100%;
                 justify-content: center;
             }
             
             .subscribe-form input {
-                width: 100%;
+                width: 50%;
+                padding: -8px 0;
+                border-radius: 0px;
             }
-            
+
+            button{
+                    display: inline-flex;       /* allows flexbox alignment */
+                    justify-content: center;    /* horizontal centering */
+                    align-items: center;        /* vertical centering */
+                    text-align: center;
+                    font-size: 0.9rem;
+                margin-top: 10px;
+                border-radius: 0px;
+                width: 90px;
+                padding: 6px 12px;
+            }
+
             nav ul {
                 justify-content: center;
                 flex-wrap: wrap;
+                margin-top: -10px;
             }
             
             .steps {
                 flex-direction: column;
             }
+
+            .step h3 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+
+        
+
+        .how-it-works h2 {
+            font-size: 1.7rem;
+        }
+
+        
+        
+        .step p {
+            font-size: 0.9rem;
+        }
             
             .message-type {
                 flex-direction: column;
@@ -440,6 +492,7 @@
                 right: 0;
                 text-align: center;
                 margin: 20px 0;
+                margin-bottom: -10px;
             }
             
             .check-messages a {
@@ -447,18 +500,129 @@
             }
             
             .hero h1 {
-                font-size: 2.2rem;
+                font-size: 1.7rem;
+                margin: 0 20px;
             }
             
             .hero p {
-                font-size: 1rem;
+                font-size: 0.8rem;
+                margin: 0 20px;
+                margin-top: 10px;
             }
-            
+      
             .price-card {
-                margin: 20px 0;
-                width: 100%;
+                margin: 5px 0;
+                width: 50%;
+                padding: 20px 5px; 
             }
+
+            .pricing h2 {
+                font-size: 1.8rem;
+                margin-bottom: 15px;
+            }
+
+            .pricing h3 {
+                font-size: 1.1rem;
+            }
+
+            .price {
+                font-size: 1.2rem;
+                margin: 10px auto;
+            }
+
+            .pricing p {
+                font-size: 0.8rem;
+                margin: 5px 0;
+                line-height: 1.3;
+            }
+
+            .message-form {
+            padding: 10px 0;
         }
+        
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+            .message-form h2{
+                font-size: 1.5rem;
+                margin-top: 20px;
+            }
+
+            .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--light-gray);
+            background: var(--gray);
+            font-size: 0.8rem;
+        }
+        
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+    
+
+        .tag {
+            padding: 5px 10px;
+            border: 1px solid var(--light-gray);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: var(--transition);
+            background: var(--gray);
+            font-size: 0.7rem;
+        }
+
+        .message-type {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+        }
+        .message-option {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+         .btn {
+            width: 60%;
+            padding: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+    
+
+            footer {
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-bottom: 10px;
+            font-size: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+  flex: 1 1 100px;    /* each link takes up min width, then wraps */
+  text-align: center; /* keeps them neat */
+}
+
+    }
     </style>
 </head>
 <body>
@@ -483,10 +647,9 @@
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">How It Works</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Testimonials</a></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="extra.html#testimonials">Testimonials</a></li>
+                    <li><a href="extra.html#faq">FAQ</a></li>
                 </ul>
             </nav>
         </div>
@@ -504,51 +667,6 @@
         </div>
     </section>
 
-    <!-- How It Works Section -->
-    <section class="how-it-works">
-        <div class="container">
-            <h2 class="section-title">How It Works</h2>
-            <div class="steps">
-                <div class="step">
-                    <i class="fas fa-edit"></i>
-                    <h3>Compose</h3>
-                    <p>Write your message or choose a traditional letter format. Add tags to categorize your content.</p>
-                </div>
-                <div class="step">
-                    <i class="fas fa-user-incognito"></i>
-                    <h3>Choose Anonymity</h3>
-                    <p>Decide to send anonymously or with your name. Provide recipient's Instagram username.</p>
-                </div>
-                <div class="step">
-                    <i class="fas fa-paper-plane"></i>
-                    <h3>Send & Deliver</h3>
-                    <p>We'll notify the recipient via Instagram and deliver your message. They can view it on our platform.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="pricing">
-        <div class="container">
-            <h2 class="section-title">Pricing</h2>
-            <div class="price-card">
-                <h3>Standard Message</h3>
-                <div class="price">$2.99</div>
-                <p>Per message delivery</p>
-                <p>Anonymous or named</p>
-                <p>Basic formatting</p>
-            </div>
-            <div class="price-card">
-                <h3>Traditional Letter</h3>
-                <div class="price">$4.99</div>
-                <p>Per letter delivery</p>
-                <p>Styled like classic mail</p>
-                <p>With decorative tags</p>
-            </div>
-            <p style="margin-top: 30px; color: #ccc;">You will receive the payment link via email. Message will be sent after payment is confirmed.</p>
-        </div>
-    </section>
 
     <!-- Message Form Section -->
     <section class="message-form" id="message-form">
@@ -612,14 +730,62 @@
         </div>
     </section>
 
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Pricing</h2>
+            <div class="price-card">
+                <h3>Standard Message</h3>
+                <div class="price">$2.99</div>
+                <p>Per message delivery</p>
+                <p>Anonymous or named</p>
+                <p>Basic formatting</p>
+            </div>
+            <div class="price-card">
+                <h3>Traditional Letter</h3>
+                <div class="price">$4.99</div>
+                <p>Per letter delivery</p>
+                <p>Styled like classic mail</p>
+                <p>With decorative tags</p>
+            </div>
+            <p style="margin-top: 30px; color: #ccc;">You will receive the payment link via email. Message will be sent after payment is confirmed.</p>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <i class="fas fa-edit"></i>
+                    <h3>Compose</h3>
+                    <p>Write your message or choose a traditional letter format. Add tags to categorize your content.</p>
+                </div>
+                <div class="step">
+                    <i class="fas fa-user-incognito"></i>
+                    <h3>Choose Anonymity</h3>
+                    <p>Decide to send anonymously or with your name. Provide recipient's Instagram username.</p>
+                </div>
+                <div class="step">
+                    <i class="fas fa-paper-plane"></i>
+                    <h3>Send & Deliver</h3>
+                    <p>We'll notify the recipient via Instagram and deliver your message. They can view it on our platform.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Contact Us</a>
-                <a href="#">Help Center</a>
+                <a href="#about">About</a>
+                <a href="#faq">FAQ</a>
+                <a href="extra.html#privacy">Privacy Policy</a>
+                <a href="extra.html#terms">Terms of Service</a>
+                <a href="extra.html#contact">Contact Us</a>
+                <a href="extra.html#help">Help Center</a>
             </div>
             <p>&copy; 2025 DramaPigeon. All rights reserved.</p>
         </div>
@@ -702,5 +868,4 @@ document.getElementById("subscribe-form").addEventListener("submit", function(ev
 
     </script>
 </body>
-
 </html>
